@@ -1,13 +1,27 @@
 {
   "name": "react-native-sinch-verification",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Sinch verification for react native",
   "main": "index.js",
-  "author": {
-    "name": "kevinresol"
-  },
-  "license": "MIT",
   "dependencies": {
-    "invariant": "^2.1.0"
-  }
+    "invariant": "^2.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevinresol/react-native-sinch-verification.git"
+  },
+  "keywords": [
+    "sinch",
+    "react-native"
+  ],
+  "author": "kevinresol",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kevinresol/react-native-sinch-verification/issues"
+  },
+  "homepage": "https://github.com/kevinresol/react-native-sinch-verification#readme"
 }
