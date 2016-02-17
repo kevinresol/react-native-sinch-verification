@@ -11,7 +11,7 @@ RCT_EXPORT_METHOD(init:(NSString *)appKey callback:(RCTResponseSenderBlock)callb
 	callback(@[[NSNull null]]);
 }
 
-RCT_EXPORT_METHOD(sms:(NSString *)phoneNumber callback:(RCTResponseSenderBlock)callback) {
+RCT_EXPORT_METHOD(sms:(NSString *)phoneNumber custom:(NSString *)custom callback:(RCTResponseSenderBlock)callback) {
     // Get user's current region by carrier info
     NSString* defaultRegion = [SINDeviceRegion currentCountryCode];
     defaultRegion=@"HK";
@@ -27,7 +27,8 @@ RCT_EXPORT_METHOD(sms:(NSString *)phoneNumber callback:(RCTResponseSenderBlock)c
                                                               format:SINPhoneNumberFormatE164];
     NSLog(phoneNumberInE164);
     id<SINVerification> verification = [SINVerification SMSVerificationWithApplicationKey:_applicationKey
-                                                                              phoneNumber:phoneNumberInE164];
+                                                                              phoneNumber:phoneNumberInE164
+                                                                                   custom:custom];
     self.verification = verification; // retain the verification instance
     [verification initiateWithCompletionHandler:^(BOOL success, NSError *error) {
         if (success) {

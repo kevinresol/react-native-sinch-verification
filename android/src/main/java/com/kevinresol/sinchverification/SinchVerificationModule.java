@@ -57,24 +57,24 @@ public class SinchVerificationModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void flashCall(String phoneNumber, Callback callback) {
+    public void flashCall(String phoneNumber, String custom, Callback callback) {
         mCallback = callback;
         Config config = SinchVerification.config().applicationKey(mApplicationKey).context(mContext).build();
         VerificationListener listener = new MyVerificationListener();
         String defaultRegion = PhoneNumberUtils.getDefaultCountryIso(mContext);
         String phoneNumberInE164 = PhoneNumberUtils.formatNumberToE164(phoneNumber, defaultRegion);
-        mVerification = SinchVerification.createFlashCallVerification(config, phoneNumberInE164, listener);
+        mVerification = SinchVerification.createFlashCallVerification(config, phoneNumberInE164, custom, listener);
         mVerification.initiate();
     }
 
     @ReactMethod
-    public void sms(String phoneNumber, final Callback callback) {
+    public void sms(String phoneNumber, String custom, final Callback callback) {
         mCallback = callback;
         Config config = SinchVerification.config().applicationKey(mApplicationKey).context(mContext).build();
         VerificationListener listener = new MyVerificationListener();
         String defaultRegion = PhoneNumberUtils.getDefaultCountryIso(mContext);
         String phoneNumberInE164 = PhoneNumberUtils.formatNumberToE164(phoneNumber, defaultRegion);
-        mVerification = SinchVerification.createSmsVerification(config, phoneNumberInE164, listener);
+        mVerification = SinchVerification.createSmsVerification(config, phoneNumberInE164, custom, listener);
         mVerification.initiate();
     }
 
