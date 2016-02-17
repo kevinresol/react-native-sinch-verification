@@ -1,0 +1,13 @@
+{
+  "name": "react-native-sinch-verification",
+  "version": "0.0.1",
+  "description": "Sinch verification for react native",
+  "main": "index.js",
+  "author": {
+    "name": "kevinresol"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "invariant": "^2.1.0"
+  }
+}
