@@ -20,9 +20,10 @@ Sinch Verification for react native. http://www.sinch.com
 
 ```javascript
 var SinchVerification = require('react-native-sinch-verification');
+var custom = "A custom string to be sent to your server backend, through Sinch's callback URL";
 
 // sms verification
-SinchVerification.sms('your-phone-number-without-country-code', (err, res) => {
+SinchVerification.sms('your-phone-number-without-country-code', custom, (err, res) => {
   if (!err) {
       // for android, verification is done, because the sms has ben read automatically
       // for ios, this means the sms has been sent out, you need to call verify with the received code
@@ -37,7 +38,7 @@ SinchVerification.verify('the-received-code', (err, res) => {
 });
 
 // flash call verification (android only)
-SinchVerification.flashCall('your-phone-number-without-country-code', (err, res) => {
+SinchVerification.flashCall('your-phone-number-without-country-code', custom, (err, res) => {
   if (!err) {
       // done!
   }
