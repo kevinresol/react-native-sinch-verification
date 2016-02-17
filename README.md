@@ -14,6 +14,7 @@ Sinch Verification for react native. http://www.sinch.com
 #### Android
 1. `npm install react-native-sinch-verification`
 2. `rnpm link react-native-sinch-verification` - (run `npm install -g rnpm` if required)
+3. require the permissions as specified [here](https://www.sinch.com/docs/verification/android/#permissions)
 
 ### Usage
 
