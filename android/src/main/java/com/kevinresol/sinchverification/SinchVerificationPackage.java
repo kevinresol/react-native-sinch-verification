@@ -1,4 +1,4 @@
-package com.coascension.sinchverification;
+package com.kevinresol.sinchverification;
 
 import com.facebook.react.ReactPackage;
 import com.facebook.react.bridge.NativeModule;

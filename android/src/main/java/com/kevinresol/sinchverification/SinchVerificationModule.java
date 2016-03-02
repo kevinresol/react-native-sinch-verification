@@ -1,4 +1,4 @@
-package com.coascension.sinchverification;
+package com.kevinresol.sinchverification;
 
 import com.facebook.react.modules.network.ForwardingCookieHandler;
 import com.facebook.react.bridge.ReactApplicationContext;
