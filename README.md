@@ -23,7 +23,7 @@ var SinchVerification = require('react-native-sinch-verification');
 var custom = "A custom string to be sent to your server backend, through Sinch's callback URL";
 
 // init with app key
-SinchVerification.init('your-app-key', (err) => {}); // TODO: should make this sync instead of async...
+SinchVerification.init('your-app-key');
 
 // sms verification
 SinchVerification.sms('your-phone-number-without-country-code', custom, (err, res) => {

@@ -1,6 +1,6 @@
 {
   "name": "react-native-sinch-verification",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Sinch verification for react native",
   "main": "index.js",
   "dependencies": {
