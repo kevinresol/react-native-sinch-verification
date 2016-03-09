@@ -73,10 +73,12 @@ public class SinchVerificationModule extends ReactContextBaseJavaModule {
 
     @ReactMethod
     public void verify(String code, final Callback callback) {
+        if (mVerification == null) {
+            callback.invoke("Verification object not found. Did you call flashCall() or sms() first?", null);
+            return;
+        }
         mCallback = callback;
-        if (mVerification == null) callback.invoke("Verification object not found. Did you call flashCall() or sms() first?", null);
         mVerification.verify(code);
-        callback.invoke(null, null);
     }
 
     private void consumeCallback(Boolean success, WritableMap payload) {

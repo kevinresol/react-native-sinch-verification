@@ -25,7 +25,6 @@ module.exports = {
 	},
 	
 	sms: function(phoneNumber, custom, callback) {
-		console.log('sms');
 		invariant(applicationKey, 'Call init() to setup the Sinch application key.');
 		SinchVerification.sms(applicationKey, phoneNumber, custom, callback);
 	},
